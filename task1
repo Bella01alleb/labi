@@ -1,0 +1,30 @@
+# ЛАБОРАТОРНАЯ РАБОТА 1
+# Вариант 5
+# Определить, есть ли среди заданных целых чисел A, B, C, D хотя бы одно нечётное.
+
+
+
+
+while True:
+    print("Введите 4 целых числа: ")
+    a, b, c, d = int(1), int(2), int(3), int(4)
+
+    if (a % 2 == 0) or (b % 2 == 0) or (c % 2 == 0) or (d % 2 == 0):
+        print("среди  целых чисел ЕСТЬ четное число")
+    else:
+        print("среди  целых чисел НЕТ четного числа")
+    if input(' Continue? ') != 'yes':
+        break
+
+
+# a = int(3)
+# b = int(2)
+# c = int(4)
+# if (a % 2 == 0 and b % 2 != 0) or (a % 2 != 0 and b % 2 == 0):
+# print("YES")
+# elif (a % 2 == 0 and c % 2 != 0) or (a % 2 != 0 and c % 2 == 0):
+# print("YES")
+# elif (b % 2 == 0 and c % 2 != 0) or (b % 2 != 0 and c % 2 == 0):
+# print("YES")
+# else:
+# print("NO")
