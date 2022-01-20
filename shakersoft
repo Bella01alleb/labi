@@ -1,7 +1,7 @@
 import random
 
-A = (0, 1, 1, 2, 3, 5, 7, 8, 8, 9)
-
+#A = (0, 1, 1, 2, 3, 5, 7, 8, 8, 9)
+#nums = [0, 1, 1, 2, 3, 5, 7, 8, 8, 9, 2, 1, 5, 7]
 
 def ShakerSort(A):
     for i in range(len(A) // 2):
@@ -17,9 +17,13 @@ def ShakerSort(A):
                 A[j - 1] = a
 
 
-print("Sorted array is:")
-for i in range(len(A)//2):
-    print("% d" % A[i])
+#print("Sorted array is:")
+#for i in range(len(A)//2):
+  #  print("% d" % A[i])
 #  print("Sorted array :")
   #  for j in range(len(A) - 1 - i):
     #    print("% d" % A[j])
+
+
+#ShakerSort(nums)
+#print(nums)
