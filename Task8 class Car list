@@ -1,0 +1,78 @@
+#Создайте класс и поля соответствующему вашему варианту (поля статические и динамические).
+#Создайте три метода (класса, объекта и статический). Выберете поле или метод для реализации инкапсуляции.
+#Пропишите запись и считывание (get, set) инкапсулированных полей.
+#ДОБАВИТЬ 2-3 МАГИЧЕСКИХ МЕТОДОВ
+#Вариант 5
+#Kласс Car: id, Марка, Модель, Год выпуска, Цвет, Цена, Регистрационный номер
+#Функции-члены реализуют запись и считывание полей (проверка корректности), вывода возраста машины.
+#Создать список объектов. Вывести:
+#a)	список автомобилей заданной марки;
+#б) список автомобилей заданной модели, которые эксплуатируются больше n лет;
+
+from pyexpat import model
+from turtle import color
+
+
+class Car:
+
+    cars = []
+
+    # конструктор
+    def __init__(self, id, brand, model, year, color, price):
+        self.id = id
+        self.brand = brand
+        self.model = model
+        self.year = year
+        self.color = color
+        self.price = price
+        self.cars.append(self)
+
+    def getId(self):
+        return self.id
+
+    def getBrand(self):
+        return self.brand
+
+    def getModel(self):
+        return model
+
+    def getYear(year):
+        return year
+
+    def getColor(self):
+        return color
+
+    def getPrice(self):
+        return self.price
+
+
+    # Метод класса для вывода заданной марки авто
+    def print_list_brand(cls, brand: str):
+        print(f"Список авто заданной марки:\n")
+        for car in cls.cars:
+            if car.brand == brand:
+                print(f"{car.id} {car.brand} {car.model} {car.year} {car.color} {car.price}")
+
+    # Метод класса для вывода заданной модели авто
+    @classmethod
+    def print_list_model_years_old(cls, model: str, years_old: int):
+        print(f"\nСписок авто заданной модели, которые эксплуатируются больше {years_old} лет:\n")
+        for car in cls.cars:
+            if car.model == model and car.year < 2022 - years_old:
+                print(f"{car.id} {car.brand} {car.model} {car.year} {car.color} {car.price}")
+
+
+Car(1, "volvo", "c30", 2011, "red", 12000)
+Car(2, "mercedes", "s500", 2009, "gold", 10000)
+Car(3, "audi", "q5 ", 2015, "silver", 29000)
+Car(4, "bmw", "x5", 2012, "white", 11000)
+Car(5, "opel", "Astra ", 2016, "black", 8000)
+Car(6, "volvo", "s80", 2015, "white", 19000)
+Car(7, "volvo", "xc90", 2020, "blue", 35000)
+Car(8, "volvo", "c30", 2010, "orange", 10000)
+
+# Вывод по марке
+Car.print_list_brand("volvo")
+
+# Вывод по модели и времени эксплуатации
+Car.print_list_model_years_old("c30", 8)
